@@ -1,0 +1,87 @@
+html p, li {
+  @media (max-width: 650px) {
+    font-size: 16px !important;
+  }
+}
+
+html h1, h2 {
+  @media (max-width: 650px) {
+    font-size: 22px !important;
+  }
+}
+
+body {
+  background-color: white;
+  color: #343434;
+  font-family: 'Raleway';
+  line-height: 1.5;
+}
+
+main {
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  @media (max-width: 1150px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 650px) {
+    padding: 0;
+    width: 300px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.lined {
+  &::before {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    position: absolute;
+    @include central-align;
+    pointer-events: none;
+    border: 1px solid rgba(154, 154, 154, 0.2);
+    border-radius: 6px;
+    content: '';
+  }
+
+  &_small::before {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+  }
+}
+
+.substrate {
+  &::after {
+    width: 93%;
+    position: absolute;
+    bottom: -10px;
+    height: 10px;
+    border-radius: 0 0 10px 10px;
+    background: #f4f4f4;
+    @include x-align;
+    content: '';
+  }
+}
+
+i.rub {
+  font-family: 'als_rublregular';
+  font-weight: normal;
+  text-transform: none;
+  font-style: normal;
+}

@@ -1,0 +1,117 @@
+.button {
+  @include reset-btn;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    #4d95ff 0%,
+    #539fff 19.92%,
+    #62b6ff 57.61%,
+    #6dbaff 84.92%,
+    #93caff 99.42%
+  );
+  box-shadow: 0px 4px 0px #539aff, 0px 19px 80px #63b7ff,
+    inset 0px -2px 10px rgba(159, 209, 255, 0.6), inset 0px 2px 10px #b6daff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 332px;
+  min-height: 90px;
+  overflow: hidden;
+  position: relative;
+
+  &_hand {
+    span {
+      position: relative;
+      padding-right: 28px;
+
+      &::after {
+        width: 18px;
+        height: 23px;
+        @include bg;
+        background-image: url('/src/img/icons/btn-hand.svg');
+        position: absolute;
+        right: 0;
+        @include y-align;
+        content: '';
+      }
+    }
+  }
+
+  &:hover {
+    background: linear-gradient(0deg, #6dbaff, #6dbaff);
+    box-shadow: 0px 4px 0px #539aff;
+  }
+
+  &:active {
+    background: #539aff;
+    box-shadow: 0px 4px 0px #539aff;
+  }
+
+  &::after {
+    content: '';
+    margin-left: 60px;
+    width: 25px;
+    height: 300px;
+    background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#fff),
+      to(hsla(0, 0%, 100%, 0.01))
+    );
+    background: linear-gradient(0deg, #fff, hsla(0, 0%, 100%, 0.01));
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+    position: absolute;
+    left: -90px;
+    top: -150px;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-animation-name: slideme;
+    animation-name: slideme;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 0;
+  }
+
+  @-webkit-keyframes slideme {
+    0% {
+      left: -30px;
+      margin-left: 0;
+    }
+
+    30%,
+    to {
+      left: 110%;
+      margin-left: 80px;
+    }
+  }
+
+  @keyframes slideme {
+    0% {
+      left: -30px;
+      margin-left: 0;
+    }
+
+    30%,
+    to {
+      left: 110%;
+      margin-left: 80px;
+    }
+  }
+}

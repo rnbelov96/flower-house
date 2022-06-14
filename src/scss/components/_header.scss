@@ -1,0 +1,88 @@
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.header__logo {
+  @media (max-width: 650px) {
+    width: 80px;
+    height: auto;
+  }
+}
+
+.header__text {
+  max-width: 253px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.header__contact-box {
+  display: flex;
+  align-items: center;
+  padding-left: 62px;
+  position: relative;
+
+  &:hover::after {
+    transform: rotate(15deg);
+  }
+
+  &::before {
+    background: #ffffff;
+    box-shadow: 0px 60px 243px rgba(202, 202, 202, 0.25),
+      0px 25.0666px 101.52px rgba(202, 202, 202, 0.179714),
+      0px 13.4018px 54.2772px rgba(202, 202, 202, 0.149027),
+      0px 7.51293px 30.4274px rgba(202, 202, 202, 0.125),
+      0px 3.99006px 16.1597px rgba(202, 202, 202, 0.100973),
+      0px 1.66035px 6.72443px rgba(202, 202, 202, 0.0702864);
+    border-radius: 5px;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    content: '';
+  }
+
+  &::after {
+    width: 20px;
+    height: 20px;
+    @include bg;
+    background-image: url('/src/img/icons/phone.svg');
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    content: '';
+    transition: transform 0.5s;
+  }
+}
+
+.header__phone {
+  @include reset-link(#343434);
+  color: #343434;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.6;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+}
+
+.header__callback {
+  @include reset-btn;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+  }
+}
