@@ -1,6 +1,15 @@
 .desc {
   @include bg;
   background-image: url('/src/img/bgs/desc-bg.jpg');
+
+  @media (max-width: 650px) {
+    padding-bottom: 30px;
+    background-position-x: 0px;
+  }
+
+  @media (min-width: 1921px) {
+    background-size: contain;
+  }
 }
 
 .desc__title {
@@ -10,6 +19,7 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   max-width: 905px;
+  margin-top: 60px;
 
   @media (max-width: 1150px) {
     font-size: 40px;
@@ -21,6 +31,11 @@
 
   @media (max-width: 767px) {
     font-size: 25px;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 650px) {
+    margin-top: 0;
   }
 
   span {
@@ -49,6 +64,11 @@
     font-size: 20px;
   }
 
+  @media (max-width: 650px) {
+    font-size: 20px !important;
+    line-height: 1.3;
+  }
+
   @include mobile-mb;
 
   &::before {
@@ -73,11 +93,11 @@
   @include mobile-mb;
 }
 
-.desc__slider-box {
-  margin-bottom: 30px;
+.desc__slider {
+  overflow: initial;
 
   @media (max-width: 650px) {
-    margin-bottom: 20px;
+    overflow: hidden;
   }
 }
 
@@ -95,6 +115,7 @@
     gap: 0px;
     flex-wrap: initial;
     justify-content: initial;
+    padding: 14px 0px 0px;
   }
 }
 
@@ -116,11 +137,14 @@
   position: relative;
   min-height: 132px;
 
+  @media (max-width: 650px) {
+    box-shadow: none;
+  }
+
   &::after {
     position: absolute;
-    left: 20px;
-    top: -10px;
-    transform: translateY(-100%);
+    left: 38px;
+    top: -30px;
     zoom: 0.5;
   }
 
@@ -132,5 +156,23 @@
 
   @media (max-width: 650px) {
     max-width: 300px;
+  }
+}
+
+.desc__form {
+  position: relative;
+  top: 50px;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
+}
+
+.desc__btn {
+  display: none;
+
+  @media (max-width: 650px) {
+    display: block;
+    margin-top: 15px;
   }
 }

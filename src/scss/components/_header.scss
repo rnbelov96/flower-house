@@ -1,6 +1,11 @@
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @media (max-width: 650px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .header__content {
@@ -21,6 +26,10 @@
   max-width: 253px;
   margin-bottom: 0;
   text-align: center;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
 }
 
 .header__contact-box {
@@ -28,6 +37,11 @@
   align-items: center;
   padding-left: 62px;
   position: relative;
+  flex-direction: column;
+
+  @media (max-width: 650px) {
+    padding-left: 40px;
+  }
 
   &:hover::after {
     transform: rotate(15deg);
@@ -47,8 +61,12 @@
     position: absolute;
     z-index: -1;
     left: 0;
-    top: 0;
+    top: 10px;
     content: '';
+
+    @media (max-width: 650px) {
+      zoom: 0.7;
+    }
   }
 
   &::after {
@@ -57,10 +75,14 @@
     @include bg;
     background-image: url('/src/img/icons/phone.svg');
     position: absolute;
-    top: 11px;
+    top: 21px;
     left: 11px;
     content: '';
     transition: transform 0.5s;
+
+    @media (max-width: 650px) {
+      zoom: 0.7;
+    }
   }
 }
 

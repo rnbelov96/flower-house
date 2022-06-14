@@ -42,6 +42,15 @@
         right: 0;
         @include y-align;
         content: '';
+        top: 40%;
+      }
+    }
+
+    @media (max-width: 650px) {
+      font-size: 14px;
+      padding-right: 20px;
+      &::after {
+        zoom: 0.8;
       }
     }
   }

@@ -16,6 +16,20 @@ const descSwiper = new Swiper('.desc__slider', {
   },
 });
 
+const swiper = new Swiper('.model__slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.model__slider-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.model__slider-btn_next',
+    prevEl: '.model__slider-btn_prev',
+  },
+});
+
 // const swiper = new Swiper('.slidersection__slider', {
 //   slidesPerView: 3,
 //   spaceBetween: 30,
