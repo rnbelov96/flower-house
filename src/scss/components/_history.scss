@@ -1,0 +1,319 @@
+.history {
+  @include bg;
+  background-image: url('/src/img/bgs/history-bg.jpg');
+  padding-top: 77px;
+
+  @media (max-width: 1150px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+  }
+}
+
+.history__title {
+  margin-bottom: 0;
+  color: white;
+}
+
+.history__text {
+  font-size: 19px;
+  line-height: 1.6;
+  font-weight: bold;
+  color: white;
+  margin-top: 41px;
+  margin-bottom: 47px;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 650px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.history__content-wrapper {
+  position: relative;
+
+  &::before {
+    content: url('/src/img/history-leafs-left.png');
+    position: absolute;
+    top: -18px;
+    left: -108px;
+
+    @media (max-width: 1150px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/history-leafs-right.png');
+    position: absolute;
+    bottom: -39px;
+    right: -85px;
+    z-index: -1;
+
+    @media (max-width: 1150px) {
+      content: none;
+    }
+  }
+}
+
+.history__content {
+  background: #ffffff;
+  box-shadow: 0px -40px 440px rgba(22, 21, 21, 0.28),
+    0px -14.6007px 160.607px rgba(22, 21, 21, 0.193195),
+    0px -7.08835px 77.9718px rgba(22, 21, 21, 0.155761),
+    0px -3.47484px 38.2232px rgba(22, 21, 21, 0.124239),
+    0px -1.37396px 15.1135px rgba(22, 21, 21, 0.0868052);
+  border-radius: 10px;
+  position: relative;
+  padding: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-image: url('/src/img/history-content-bg.svg');
+  background-repeat: no-repeat;
+  background-position-x: 50px;
+  background-position-y: bottom;
+  margin-bottom: 60px;
+
+  @media (max-width: 767px) {
+    padding: 30px;
+    gap: 20px;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  @include tablet-mb;
+  @include mobile-mb;
+}
+
+.history__content-left-side {
+  @include max-width(270px);
+}
+
+.history__owner {
+  display: block;
+  margin-bottom: 27px;
+
+  @include mobile-mb;
+}
+
+.history__owner-name {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.history__right-side {
+  @include max-width(734px);
+
+  & > * + * {
+    margin-top: 15px;
+  }
+}
+
+.history__content-text {
+  margin-bottom: 0;
+
+  &:last-child {
+    font-size: 19px;
+    line-height: 1.6;
+    font-weight: bold;
+  }
+}
+
+.history__middle-block {
+  display: flex;
+  padding-top: 23px;
+  padding-right: 40px;
+  padding-bottom: 23px;
+  padding-left: 35px;
+  border: 1px solid #545454;
+  border-radius: 10px;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @media (max-width: 650px) {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.history__middle-text-box {
+  @include max-width(225px);
+  position: relative;
+
+  &::after {
+    width: 1px;
+    height: 76px;
+    background-color: #545454;
+    position: absolute;
+    right: -20px;
+    @include y-align;
+    content: '';
+
+    @media (max-width: 767px) {
+      content: none;
+    }
+  }
+}
+
+.history__years {
+  font-family: 'Cormorant';
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    font-size: 22px !important;
+  }
+}
+
+.history__years-caption {
+  margin-bottom: 0;
+}
+
+.history__stats-box {
+  padding-left: 129px;
+  position: relative;
+
+  @media (max-width: 650px) {
+    padding-left: 80px;
+  }
+
+  &:nth-child(2) {
+    @include max-width(353px);
+    position: relative;
+
+    &::after {
+      width: 1px;
+      height: 76px;
+      background-color: #545454;
+      position: absolute;
+      right: -20px;
+      @include y-align;
+      content: '';
+
+      @media (max-width: 1150px) {
+        content: none;
+      }
+    }
+
+    &::before {
+      content: url('/src/img/icons/history/2.png');
+    }
+  }
+
+  &:nth-child(3) {
+    @include max-width(404px);
+    &::before {
+      content: url('/src/img/icons/history/3.png');
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    @include y-align;
+
+    @media (max-width: 650px) {
+      zoom: 0.7;
+    }
+  }
+}
+
+.history__stats-title {
+  margin-bottom: 0;
+}
+
+.history__stats-numbers {
+  font-family: 'Cormorant';
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  @media (max-width: 650px) {
+    font-size: 20px !important;
+  }
+}
+
+.history__list-title {
+  max-width: 847px;
+  text-align: center;
+  color: white;
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 33px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+
+  @include mobile-mb;
+}
+
+.history__list {
+  @include reset-list;
+  display: flex;
+  gap: 35px 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 650px) {
+    gap: 20px;
+  }
+}
+
+.history__item {
+  @include max-width(370px);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.history__item-logo {
+  flex-shrink: 0;
+}
+
+.history__item-text {
+  color: white;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    text-align: center;
+  }
+}
+
+.history__form {
+  position: relative;
+  top: 50px;
+
+  @media (max-width: 650px) {
+    top: 30px;
+  }
+}
