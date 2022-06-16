@@ -30,6 +30,48 @@ const modelSwiper = new Swiper('.model__slider', {
   },
 });
 
+const supportSwiper = new Swiper('.support__slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoHeight: true,
+  loop: true,
+  pagination: {
+    el: '.support-top__slider-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.support-top__slider-btn_next',
+    prevEl: '.support-top__slider-btn_prev',
+  },
+  breakpoints: {
+    650: {
+      autoHeight: false,
+    },
+  },
+});
+
+const supportBottomSwiper = new Swiper('.support-bottom__slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.support-bottom__slider-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.support-bottom__slider-btn_next',
+    prevEl: '.support-bottom__slider-btn_prev',
+  },
+  breakpoints: {
+    650: {
+      slidesPerView: 2,
+    },
+    1150: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 const categorySwiper = new Swiper('.category__slider', {
   slidesPerView: 1,
   spaceBetween: 30,

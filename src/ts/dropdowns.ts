@@ -65,3 +65,20 @@ const DOMAnimations = {
     return this.slideUp(element, duration);
   },
 };
+
+const formatBtnElList = document.querySelectorAll('.format__item-btn');
+
+formatBtnElList.forEach(btnEl => {
+  btnEl.addEventListener('click', e => {
+    const clickedBtn = e.currentTarget as HTMLButtonElement;
+    const listBeforeEl = clickedBtn.previousElementSibling;
+    if (clickedBtn.classList.contains('format__item-btn_opened')) {
+      clickedBtn.textContent = 'Cмотреть весь список';
+    } else {
+      clickedBtn.textContent = 'Скрыть весь список';
+    }
+    clickedBtn.classList.toggle('format__item-btn_opened');
+
+    DOMAnimations.slideToggle(listBeforeEl);
+  });
+});
