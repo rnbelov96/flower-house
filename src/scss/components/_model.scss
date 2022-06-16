@@ -3,6 +3,7 @@
   padding-bottom: 100px;
   @include bg;
   background-image: url('/src/img/bgs/model-bg.jpg');
+  overflow: hidden;
 
   @media (max-width: 1150px) {
     padding-top: 100px;
