@@ -1,0 +1,124 @@
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: white;
+
+  @media (max-width: 650px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (max-width: 1010px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer__copyright {
+  margin-bottom: 4px;
+}
+
+.footer__data {
+  margin-bottom: 22px;
+}
+
+.footer__address {
+  padding-left: 67px;
+  position: relative;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    padding-left: 50px;
+  }
+
+  &::before {
+    width: 47px;
+    height: 50px;
+    @include bg;
+    background-image: url('/src/img/icons/gerb.jpg');
+    content: '';
+    position: absolute;
+    left: 0;
+    @include y-align;
+
+    @media (max-width: 650px) {
+      zoom: 0.7;
+    }
+  }
+}
+
+.footer__center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__logo {
+  @media (max-width: 650px) {
+    width: 100px;
+    height: auto;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__social-link {
+  width: 32px;
+  height: 32px;
+  @include bg;
+
+  &:nth-child(1) {
+    background-image: url('/src/img/icons/vk.svg');
+  }
+
+  &:nth-child(2) {
+    background-image: url('/src/img/icons/telegA.svg');
+  }
+}
+
+.footer__policy {
+  @include reset-btn;
+  color: #9a9a9a;
+  text-decoration: underline;
+}
+
+.footer__right-side {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+
+  @media (max-width: 1010px) {
+    align-items: center;
+  }
+}
+
+.footer__f5 {
+  @include reset-link(#343434);
+  color: #343434;
+  padding-left: 71px;
+  position: relative;
+
+  &::before {
+    width: 51px;
+    height: 47px;
+    @include bg;
+    background-image: url('/src/img/icons/f5.svg');
+    content: '';
+    left: 0;
+    @include y-align;
+    position: absolute;
+  }
+}
