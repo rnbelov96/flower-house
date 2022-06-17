@@ -1,0 +1,247 @@
+.city {
+  @include bg;
+  background-image: url('/src/img/bgs/city-bg.jpg');
+  padding-top: 120px;
+  padding-bottom: 114px;
+
+  @media (max-width: 1150px) {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+}
+
+.city__title {
+  margin-bottom: 7px;
+}
+
+.city__content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 50px;
+
+  @media (max-width: 1150px) {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.city__note {
+  @include max-width(530px);
+  padding-left: 40px;
+  margin-bottom: 0;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+
+  @media (max-width: 1050px) {
+    order: 3;
+  }
+
+  &::before {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    @include y-align;
+    @include bg;
+    background-image: url('/src/img/city-icon.svg');
+    content: '';
+  }
+}
+
+.city__right-side {
+  @include max-width(360px);
+  position: relative;
+  padding-top: 32px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-bottom: 35px;
+  background: #ffffff;
+  box-shadow: 0px 60px 243px rgba(202, 202, 202, 0.25),
+    0px 25.0666px 101.52px rgba(202, 202, 202, 0.179714),
+    0px 13.4018px 54.2772px rgba(202, 202, 202, 0.149027),
+    0px 7.51293px 30.4274px rgba(202, 202, 202, 0.125),
+    0px 3.99006px 16.1597px rgba(202, 202, 202, 0.100973),
+    0px 1.66035px 6.72443px rgba(202, 202, 202, 0.0702864);
+  border-radius: 10px;
+
+  @media (max-width: 1050px) {
+    order: 1;
+  }
+
+  @media (max-width: 650px) {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  &::after {
+    content: url('/src/img/city-flowers.png');
+    z-index: -1;
+    position: absolute;
+    right: -97px;
+    top: -21px;
+
+    @media (max-width: 650px) {
+      zoom: 0.9;
+    }
+  }
+}
+
+.city__list-title {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 160%;
+  margin-bottom: 8px;
+}
+
+.city__list {
+  @include reset-list;
+
+  & > * + * {
+    margin-top: 3px;
+  }
+}
+
+.city__item {
+  padding-left: 26px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    @include y-align;
+    width: 18px;
+    height: 18px;
+    @include bg;
+    background-image: url('/src/img/icons/model-check.svg');
+    content: '';
+  }
+}
+
+.city__map-box {
+  position: absolute;
+  left: 36px;
+  top: -59px;
+
+  @media (max-width: 1050px) {
+    position: relative;
+    left: 260px;
+    top: 0;
+    order: 2;
+  }
+
+  @media (max-width: 650px) {
+    display: none;
+  }
+}
+
+.city__mark-box {
+  position: absolute;
+
+  &:nth-child(1) {
+    left: -13px;
+    top: 315px;
+  }
+  &:nth-child(2) {
+    left: 37px;
+    top: 283px;
+  }
+  &:nth-child(3) {
+    left: 68px;
+    top: 242px;
+  }
+  &:nth-child(4) {
+    left: 107px;
+    top: 185px;
+  }
+  &:nth-child(5) {
+    left: 155px;
+    top: 228px;
+  }
+  &:nth-child(6) {
+    left: 167px;
+    top: 261px;
+  }
+  &:nth-child(7) {
+    left: 155px;
+    top: 295px;
+  }
+  &:nth-child(8) {
+    left: 260px;
+    top: 267px;
+  }
+  &:nth-child(9) {
+    left: 291px;
+    top: 301px;
+  }
+  &:nth-child(10) {
+    left: 253px;
+    top: 330px;
+  }
+  &:nth-child(11) {
+    left: 343px;
+    top: 374px;
+  }
+  &:nth-child(12) {
+    left: 503px;
+    top: 402px;
+  }
+  &:nth-child(13) {
+    left: 130px;
+    top: 107px;
+  }
+}
+
+.city__mark {
+  width: 46px;
+  height: 64px;
+  cursor: pointer;
+  @include bg;
+  background-image: url('/src/img/city-mark.png');
+
+  &_blue {
+    background-image: url('/src/img/city-mark-blue.png');
+    cursor: initial;
+  }
+
+  &_opened + .city__mark-caption {
+    opacity: 1;
+    z-index: 3;
+  }
+}
+
+.city__mark-caption {
+  background: #ffffff;
+  box-shadow: 0px 60px 306px rgba(97, 97, 97, 0.27),
+    0px 18.0882px 92.25px rgba(97, 97, 97, 0.175929),
+    0px 7.51293px 38.3159px rgba(97, 97, 97, 0.135),
+    0px 2.71728px 13.8581px rgba(97, 97, 97, 0.094071);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 160%;
+  margin-bottom: 0;
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}

@@ -24,7 +24,6 @@
       integrity="sha512-qCt/OTd55ilhuXLRNAp/G8uONXUrpFoDWsXDtyjV4wMbvh46dOEjvHZyWkvnffc6I2g/WHSKsaFUCm0RISxnzQ=="
       crossorigin="anonymous"
     ></script>
-    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.map&lang=ru-RU"></script>
   </head>
   <body>
     <main>
@@ -88,7 +87,7 @@
             <div class="swiper-pagination desc__slider-pagination"></div>
           </div>
 
-          <button class="button desc__btn button_hand">
+          <button class="button desc__btn button_hand js-present">
             <span>ПОЛУЧИТЬ ИНФОРМАЦИЮ</span>
           </button>
 
@@ -1848,6 +1847,104 @@
             </div>
           </div>
         </section>
+        <section class="city">
+          <div class="container">
+            <h2 class="city__title title">
+              Приоритетные города для развития по франшизе
+            </h2>
+            <div class="devider"></div>
+            <div class="city__content">
+              <p class="city__note">
+                Масштабность города способствует высокому уровню проходимости
+                торговой точки и увеличению объёма продаж.
+              </p>
+              <div class="city__map-box">
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="0"></div>
+                  <p class="city__mark-caption">Новороссийск</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="1"></div>
+                  <p class="city__mark-caption">Ростов</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="2"></div>
+                  <p class="city__mark-caption">Воронеж</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="3"></div>
+                  <p class="city__mark-caption">Москва</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="4"></div>
+                  <p class="city__mark-caption">Нижний&nbsp;Новгород</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="5"></div>
+                  <p class="city__mark-caption">Казань</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="6"></div>
+                  <p class="city__mark-caption">Самара</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="7"></div>
+                  <p class="city__mark-caption">Пермь</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="8"></div>
+                  <p class="city__mark-caption">Екатеринбург</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="9"></div>
+                  <p class="city__mark-caption">Челябинск</p>
+                </div>
+                <div class="city__mark-box">
+                  <div
+                    class="city__mark city__mark_opened"
+                    data-mark-index="10"
+                  ></div>
+                  <p class="city__mark-caption">Омск</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark" data-mark-index="11"></div>
+                  <p class="city__mark-caption">Красноярск</p>
+                </div>
+                <div class="city__mark-box">
+                  <div class="city__mark city__mark_blue"></div>
+                </div>
+                <img
+                  src="./img/city-map.svg"
+                  alt="Карта России"
+                  width="1083"
+                  height="600"
+                  class="city__map-img"
+                />
+              </div>
+              <div class="city__right-side lined">
+                <p class="city__list-title">
+                  Для открытия франшизы в приоритете города, близкие
+                  Санкт-Петербургу по уровню инфраструктуры, культуры и
+                  городской активности:
+                </p>
+                <ul class="city__list">
+                  <li class="city__item">Москва</li>
+                  <li class="city__item">Казань</li>
+                  <li class="city__item">Омск</li>
+                  <li class="city__item">Новороссийск</li>
+                  <li class="city__item">Нижний Новгород</li>
+                  <li class="city__item">Воронеж</li>
+                  <li class="city__item">Екатеринбург</li>
+                  <li class="city__item">Челябинск</li>
+                  <li class="city__item">Ростов-на-Дону</li>
+                  <li class="city__item">Самара</li>
+                  <li class="city__item">Красноярск</li>
+                  <li class="city__item">Пермь</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
       <section class="start">
@@ -1896,7 +1993,7 @@
                       class="modal-form__input-box modal-form__input-box_city"
                     >
                       <label for="lfpstart" class="visually-hidden"
-                        >Введите номер телефона</label
+                        >Введите город</label
                       >
                       <input
                         type="text"
@@ -1957,7 +2054,9 @@
       <div class="container">
         <div class="footer__content">
           <div class="footer__left-side">
-            <p class="footer__copyright">© FLOWER ART HOUSE, 2017-<span class="js-year"></span> г.</p>
+            <p class="footer__copyright">
+              © FLOWER ART HOUSE, 2017-<span class="js-year"></span> г.
+            </p>
             <p class="footer__data">
               ИП Голубева Елена Валерьевна, ИНН&nbsp;860222141281
             </p>
@@ -2014,7 +2113,9 @@
 
     <div class="modal">
       <div class="modal__center-wrapper animate__animated">
-        <form class="modal-form">
+        <form
+          class="modal-form modal-form_modal modal-form_modal_present lined substrate"
+        >
           <input type="text" name="section-name" value="Закрытая" hidden />
           <input
             type="text"
@@ -2030,10 +2131,74 @@
             class="js-modal-btn-hidden"
             hidden
           />
-          <h3 class="modal-form__title js-modal-form-title"></h3>
-          <button class="button button_modal-form js-modal-form-btn">
-            Получить документацию
-          </button>
+          <div class="modal-form__wrapper">
+            <div class="modal-form__left-side">
+              <h3 class="modal-form__title js-modal-form-title">
+                Проверьте, свободен ли ваш город и&nbsp;успейте присоединиться к
+                команде
+              </h3>
+              <p class="modal-form__subtitle">
+                Не упускайте шанс присоединиться к франшизе FLOWER ART HOUSE.
+                Получите бесплатную презентацию на почту
+              </p>
+            </div>
+            <div class="modal-form__right-side">
+              <div class="modal-form__content">
+                <div class="modal-form__input-container">
+                  <div class="modal-form__input-box">
+                    <label for="lfpmodal" class="visually-hidden"
+                      >Введите номер телефона</label
+                    >
+                    <input
+                      type="tel"
+                      placeholder="+7 (___) ___ ____"
+                      name="phone"
+                      data-type="phone"
+                      class="modal-form__input"
+                      id="lfpmodal"
+                    />
+                  </div>
+                  <div class="modal-form__input-box">
+                    <label for="lfemodal" class="visually-hidden"
+                      >Введите email</label
+                    >
+                    <input
+                      type="email"
+                      placeholder="bestpartner@flowerhouse.ru"
+                      name="email"
+                      data-type="email"
+                      class="modal-form__input"
+                      id="lfemodal"
+                    />
+                  </div>
+                  <div class="modal-form__input-box">
+                    <label for="lfnmodal" class="visually-hidden"
+                      >Введите имя</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="Елена Голубева"
+                      name="name"
+                      data-type="name"
+                      class="modal-form__input"
+                      id="lfnmodal"
+                    />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="button button_hand modal-form__btn"
+                >
+                  <span class="js-modal-form-btn">ЗАБРОНИРОВАТЬ ГОРОД</span>
+                </button>
+              </div>
+              <p class="modal-form__text">
+                Я подтверждаю, что ознакомлен, и даю согласие на обработку
+                персональных данных на условиях и для целей, определяемых
+                <span class="js-policy"> Политикой конфиденциальности. </span>
+              </p>
+            </div>
+          </div>
           <button
             data-modal-close=""
             class="modal__close"
@@ -2303,5 +2468,10 @@
     <div class="modal">
       <div class="modal__center-wrapper animate__animated"></div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://api-maps.yandex.ru/2.1/?apikey=c3472711-0044-40b4-92fe-e8200d2156a0&load=package.map&lang=ru-RU&ver=2."
+      id="yamapsapi-js"
+    ></script>
   </body>
 </html>
