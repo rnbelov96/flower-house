@@ -65,7 +65,7 @@
     width: 794px;
     aspect-ratio: 794/702;
     @include bg;
-    background-image: url('/src/img/model-phone.png');
+    background-image: url('/src/img/model-phone.webp');
     content: '';
 
     @media (max-width: 800px) {
